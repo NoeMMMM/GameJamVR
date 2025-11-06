@@ -1,76 +1,105 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
-public static PuzzleManager Instance;
+    public static PuzzleManager Instance;
 
-[Tooltip("Tous les SnapChecker du niveau")]
-public SnapChecker[] snapCheckers;
+    [Tooltip("Tous les SnapChecker du niveau")]
+    public SnapChecker[] snapCheckers;
 
-[Header("Effets de victoire")]
-public AudioSource VictorySound;
+    [Header("Effets de victoire")]
+    public AudioSource VictorySound;
 
-[Header("Animal à animer")]
-public Animator animalAnimator;     // → Animator de ton prefab animal
-public GameObject animalObject;     // → GameObject complet de ton animal
-public float escapeSpeed = 3f;      // → vitesse de fuite
-public float escapeDuration = 2.5f; // → durée de la fuite avant disparition
+    [Header("Animal à animer")]
+    public Animator animalAnimator;     
+    public GameObject animalObject;     
+    public float escapeSpeed = 3f;      
+    public float escapeDuration = 2.5f; 
 
-private bool puzzleCompleted = false;
+    [Header("Transition vers les crédits")]
+    public float delayBeforeCredits = 3f; // ← Durée avant de charger la scène des crédits
+    public string creditsSceneName = "CreditsScene"; // ← Nom de ta scène des crédits (à adapter)
 
-private void Awake()
-{
-    Instance = this;
-}
+    private bool puzzleCompleted = false;
 
-public void CheckAllSockets()
-{
-    if (puzzleCompleted) return;
-
-    foreach (var snap in snapCheckers)
+    private void Awake()
     {
-        if (!snap.IsCorrect) return; // si un snap est faux, on quitte
+        Instance = this;
     }
 
-    // Si on arrive ici, tout est correct
-    OnPuzzleCompleted();
-}
-
-private void OnPuzzleCompleted()
-{
-    puzzleCompleted = true;
-
-    //Joue le son de victoire s’il existe
-    if (VictorySound != null)
-        VictorySound.Play();
-
-    //Lance la fuite de l’animal
-    if (animalAnimator != null)
-        StartCoroutine(AnimalEscape());
-}
-
-private IEnumerator AnimalEscape()
-{
-    Debug.Log(" L’animal prend la fuite !");
-
-    //Lance l’animation "Run" si elle existe dans l’Animator
-    animalAnimator.SetTrigger("Run");
-
-    //Fait bouger l’animal vers l’avant pendant quelques secondes
-    float timer = 0f;
-    Vector3 direction = animalObject.transform.forward;
-
-    while (timer < escapeDuration)
+    public void CheckAllSockets()
     {
-        animalObject.transform.position += direction * escapeSpeed * Time.deltaTime;
-        timer += Time.deltaTime;
-        yield return null;
+        if (puzzleCompleted) return;
+
+        foreach (var snap in snapCheckers)
+        {
+            if (!snap.IsCorrect) return; // si un snap est faux, on quitte
+        }
+
+        // Si on arrive ici, tout est correct
+        OnPuzzleCompleted();
     }
 
-    //Fais disparaître l’animal après la fuite
-    Destroy(animalObject);
-}
+    private void OnPuzzleCompleted()
+    {
+        puzzleCompleted = true;
+
+        // Joue le son de victoire s’il existe
+        if (VictorySound != null)
+            VictorySound.Play();
+
+        // Lance la fuite de l’animal
+        if (animalAnimator != null)
+            StartCoroutine(AnimalEscape());
+        else
+            StartCoroutine(WaitAndLoadCredits()); // si pas d’animal, on lance directement le délai
+    }
+
+    private IEnumerator AnimalEscape()
+    {
+        Debug.Log("🐾 L’animal prend la fuite !");
+
+        // Lance l’animation "Run"
+        animalAnimator.SetTrigger("Run");
+
+        // Fait bouger l’animal vers l’avant pendant quelques secondes
+        float timer = 0f;
+        Vector3 direction = animalObject.transform.forward;
+
+        while (timer < escapeDuration)
+        {
+            animalObject.transform.position += direction * escapeSpeed * Time.deltaTime;
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        // Fais disparaître l’animal après la fuite
+        Destroy(animalObject);
+
+        // Attends la fin du son de victoire (ou un délai fixe)
+        yield return StartCoroutine(WaitAndLoadCredits());
+    }
+
+    private IEnumerator WaitAndLoadCredits()
+    {
+        // Attendre le son s’il existe
+        float waitTime = delayBeforeCredits;
+
+        if (VictorySound != null)
+        {
+            // On prend la durée du clip si elle est plus longue que le délai prévu
+            float clipLength = VictorySound.clip != null ? VictorySound.clip.length : 0f;
+            waitTime = Mathf.Max(delayBeforeCredits, clipLength);
+        }
+
+        Debug.Log($"⏳ Attente de {waitTime} secondes avant les crédits...");
+        yield return new WaitForSeconds(waitTime);
+
+        // Charge la scène des crédits
+        Debug.Log("🎬 Chargement de la scène des crédits...");
+        SceneManager.LoadScene(creditsSceneName);
+    }
 }
 
