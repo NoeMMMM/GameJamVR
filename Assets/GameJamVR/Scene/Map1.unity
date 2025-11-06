@@ -2568,7 +2568,7 @@ MonoBehaviour:
   escapeSpeed: 3
   escapeDuration: 2.5
   delayBeforeCredits: 5
-  creditsSceneName: CreditsScene
+  creditsSceneName: Credit
 --- !u!4 &1185876109
 Transform:
   m_ObjectHideFlags: 0
