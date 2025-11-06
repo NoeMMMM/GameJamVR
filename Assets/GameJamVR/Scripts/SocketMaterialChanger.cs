@@ -40,10 +40,10 @@ public class SocketMaterialChanger : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         // Nettoyage
         socket.selectEntered.RemoveListener(OnObjectPlaced);
         socket.selectExited.RemoveListener(OnObjectRemoved);
-    }
+    }*/
 }
