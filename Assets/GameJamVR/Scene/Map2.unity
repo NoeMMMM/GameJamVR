@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: eye1
 --- !u!1001 &193799418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: triangle3
 --- !u!1 &261249125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,7 +3762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: pyramid1
 --- !u!1 &627897845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,7 +3968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: triangle3
 --- !u!1 &712229205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 106093692981118498, guid: aec71f91a8da27d418aa44bd0c543f9b, type: 3}
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: cube1
 --- !u!1001 &718299880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4100,7 +4100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 293383052580426713, guid: 3d9edaa366bf8c840aeeff4b19ba8ae8, type: 3}
       propertyPath: m_TagString
-      value: eye2
+      value: eye1
       objectReference: {fileID: 0}
     - target: {fileID: 3123784564713775526, guid: 3d9edaa366bf8c840aeeff4b19ba8ae8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4735,7 +4735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: eye1
 --- !u!4 &811071863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3055608056112866512, guid: d206aa2a34cb797418b593849c744ef0, type: 3}
@@ -5307,7 +5307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1238175484844882535, guid: 3e111ce69c365b149ad28e413724e85d, type: 3}
       propertyPath: m_TagString
-      value: cube4
+      value: cube1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5404,7 +5404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399115807279457345, guid: d206aa2a34cb797418b593849c744ef0, type: 3}
       propertyPath: m_TagString
-      value: Oreille1
+      value: triangle3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6064,6 +6064,10 @@ PrefabInstance:
     - target: {fileID: 1238175484844882535, guid: 3e111ce69c365b149ad28e413724e85d, type: 3}
       propertyPath: m_Name
       value: CubePrefabs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238175484844882535, guid: 3e111ce69c365b149ad28e413724e85d, type: 3}
+      propertyPath: m_TagString
+      value: cube1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7219,7 +7223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: triangle3
 --- !u!1 &1148001161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 106093692981118498, guid: aec71f91a8da27d418aa44bd0c543f9b, type: 3}
@@ -7513,7 +7517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7989112875056598965, guid: 71a8ef61be3ae4247b02b83b1d728e57, type: 3}
       propertyPath: m_TagString
-      value: pyramid2
+      value: pyramid1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7664,7 +7668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399115807279457345, guid: d206aa2a34cb797418b593849c744ef0, type: 3}
       propertyPath: m_TagString
-      value: oreillegauche
+      value: triangle3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8102,7 +8106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: nose1
 --- !u!1 &1373868580
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,7 +8282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: pyramid1
 --- !u!1 &1418779978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 106093692981118498, guid: aec71f91a8da27d418aa44bd0c543f9b, type: 3}
@@ -9123,7 +9127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: cube1
 --- !u!4 &1511771425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3123784564713775526, guid: 3d9edaa366bf8c840aeeff4b19ba8ae8, type: 3}
@@ -9533,7 +9537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1238175484844882535, guid: 3e111ce69c365b149ad28e413724e85d, type: 3}
       propertyPath: m_TagString
-      value: cube2
+      value: cube1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10020,7 +10024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: cube1
 --- !u!4 &1613756166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 826926667774557303, guid: 3e111ce69c365b149ad28e413724e85d, type: 3}
@@ -11148,7 +11152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: pyramid1
 --- !u!1001 &1742532756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12015,7 +12019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399115807279457345, guid: d206aa2a34cb797418b593849c744ef0, type: 3}
       propertyPath: m_TagString
-      value: triangle4
+      value: triangle3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12057,7 +12061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: cube1
 --- !u!4 &1906042806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3055608056112866512, guid: d206aa2a34cb797418b593849c744ef0, type: 3}
@@ -12203,7 +12207,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snapCheckers:
-  - {fileID: 1148001162}
+  - {fileID: 1730330123}
+  - {fileID: 810836174}
+  - {fileID: 615910306}
+  - {fileID: 1503418420}
+  - {fileID: 1404173738}
+  - {fileID: 1901245585}
+  - {fileID: 712229209}
+  - {fileID: 233022605}
+  - {fileID: 1146418855}
+  - {fileID: 1611386929}
+  - {fileID: 191912253}
+  - {fileID: 707128420}
+  - {fileID: 1331757502}
+  - {fileID: 2035697211}
   VictorySound: {fileID: 1953142082}
   animalAnimator: {fileID: 0}
   animalObject: {fileID: 0}
@@ -12961,7 +12978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa69420922958b841a6bd5037f1bfdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTag: Cylinder
+  expectedTag: triangle3
 --- !u!1001 &2038976011
 PrefabInstance:
   m_ObjectHideFlags: 0
