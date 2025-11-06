@@ -11,6 +11,20 @@ TagManager:
   - Water
   - Sphere
   - Cylinder
+  - Oreille1
+  - oreillegauche
+  - cube1
+  - cube2
+  - cube3
+  - cube4
+  - eye1
+  - pyramid1
+  - pyramid2
+  - pyramid3
+  - nose1
+  - eye2
+  - triangle3
+  - triangle4
   layers:
   - Default
   - TransparentFX
